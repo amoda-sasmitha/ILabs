@@ -1,0 +1,81 @@
+.nav-wrapper{
+    background-color: white;
+    padding: 25px 0px;
+}
+
+a , a:hover , a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.logo-text{
+    margin: 0px;
+    color: black;
+    text-decoration: none;
+    font-size: 2.2rem;
+}
+h1.title{
+    margin: 0px;
+    color: white;
+    font-size: 3.8rem;
+}
+
+h1.title span {
+    color: #ffc952;
+}
+
+.logo-text span {
+    color: #ffc952;
+}
+
+section.portfolio {
+    background-color: #333333;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn{
+    margin-left: auto;
+    order: 2;
+}
+
+.section-padding{
+    padding: 8rem 0rem;
+}
+
+p.subtitle{
+    color: #999999;
+}
+
+.p-0{
+    padding: 0px 0px;
+    font-size: 1.7rem;
+}
+
+/* image grid css */
+.grid-padding{
+    padding: 1.4rem 0rem 0rem 0rem; 
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .image-column {
+    flex: 33.33%;
+  }
+  
+  .image-column img {
+    vertical-align: middle;
+  }
+/* --------------- */
+
