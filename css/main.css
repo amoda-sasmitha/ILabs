@@ -40,6 +40,9 @@ section.portfolio {
 .bg-red{
     background-color: red;
 }
+.bg-blue{
+    background-color: blue;
+}
 
 .flex-container{
     display: flex;
@@ -103,12 +106,12 @@ section.news{
 }
 
 .single-news{
-    padding: 3rem 0rem;
+    padding: 4.5rem 0rem;
     border-top: 1px solid #33333334;
     align-items: center;
 }
 
-.single-news .last{
+.last{
     border-bottom: 1px solid #33333334; 
 }
 
@@ -175,4 +178,160 @@ section.news{
     overflow: hidden;
   }
 /* ---------------------------------- */
+/* 03 footer section css */
+
+.footer-section {
+    padding: 6rem 0rem;
+    background-color: #f9f9f9;
+}
+.footer-logo h2 {
+    margin: 0px;
+    color: black;
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin: 0rem 0rem 4rem 0rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-logo h2 span {
+    color: #ffc952;
+    font-size: 2.8rem;
+}
+
+.footer-widget h4 {
+    margin: 0rem 0rem 4rem 0rem;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.single-post p {
+    font-weight: 300;
+    margin: 0px;
+    color: #848383; 
+    
+}
+.details p {
+    font-weight: 500;
+    margin: 0px;
+    padding-top: 2px;
+    color: #848383; 
+    font-family: 'Poppins', sans-serif;
+}
+.single-post{
+    padding-bottom: 15px;
+}
+.single-post span {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0px;
+    padding : 8px 0px;
+    color: rgba(100, 100, 100, 0.659);
+    font-family: 'Poppins', sans-serif;
+    
+}
+.insta-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-padding{
+    padding-top: 2.6rem !important;
+}
+
+.social-icons{
+    padding: 0px;
+    margin: 0px;  
+}
+
+.social-icons ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.social-icons ul li {
+    display: inline-block;
+}
+
+.mb-0{
+    margin-bottom: 0px !important;
+}
+
+.social-icons ul li > i {
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.217);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.social-icons ul li > i:hover {
+   background-color: rgb(52, 52, 52);
+   color: white;
+}
+
+.insta-image {
+    width: 80px;
+    padding : 0px 10px 10px 0px;
+}
+
+.input-group{
+    display: table;
+    border-collapse: collapse;
+    width:100%;
+    max-width: 300px;
+}
+
+.input-group > div{
+    border: 1px solid #ddd;
+    display: table-cell;
+    vertical-align: middle; 
+}
+.input-group-icon{
+background: #222222;;
+color: white;
+
+padding: 0 18px;
+}
+
+.input-group-area{
+width:100%;
+}
+
+.input-group input{
+border: 0;
+display: block;
+width: 100%;
+padding: 10px 20px;
+}
+
+@media (max-width: 500px) {
+    .insta-flex{
+        width: 70%;
+    }
+}
+
+@media (min-width: 500px) {
+    .insta-flex{
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .insta-flex{
+        width: 80%;
+    }
+}
+@media (min-width: 1200px) {
+    .insta-flex{
+        width: 100%;
+    }
+}
 
