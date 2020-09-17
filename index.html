@@ -33,7 +33,50 @@
             </div>
         </nav>
     </header>
+    <!--slideshow section begins -->
+    <section class="slideshow" id="slideshow" >
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./images/cover3.jpg" >
+                    <div class="caption"> 
+                        <h2 class="caption-text">professional<span>.</span></h2>
+                    </div>
+            </div>
+          
+            <div class="mySlides fade">
+                <img src="./images/cover2.jpeg" >
+                <div class="caption"> 
+                    <h2 class="caption-text">loremipsum<span>.</span></h2>
+                </div>
+            </div>
 
+            <div class="mySlides fade">
+                <img src="./images/cover3.jpg" >
+                <div class="caption"> 
+                    <h2 class="caption-text">stylish<span>.</span></h2>
+                </div>
+            </div>
+        </div>
+          
+        <!-- The dots/circles -->
+        <div class="dotset">
+            <div id="prev01" class="preview d-none" >
+                <img id="prev-img" src="./images/cover3.jpg" >
+                <h6 id="prev-text">professional<span>.</span></h6>
+            </div>
+            <div id="prev02" class="preview d-none" >
+                <img id="prev-img"  src="./images/cover2.jpeg">
+                <h6 id="prev-text">loremipsum<span>.</span></h6>
+            </div>
+            <div id="prev03" class="preview d-none" >
+                <img id="prev-img" src="./images/cover3.jpg" >
+                <h6 id="prev-text">stylish<span>.</span></h6>
+            </div>
+            <span id="dot01" class="dot" onclick="currentSlide(1)"></span>
+            <span id="dot02" class="dot" onclick="currentSlide(2)"></span>
+            <span id="dot03" class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
     <!--portfolio section begins -->
     <section class="portfolio section-padding" id="portfolio">
         <div class="container">
@@ -240,5 +283,53 @@
     </footer>
     <!--footer ends -->
 </body>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+var prev01 = document.getElementById("prev01");
+var prev02 = document.getElementById("prev02");
+var prev03 = document.getElementById("prev03");
+
+document.getElementById("dot01").addEventListener("mouseover", () => {
+    prev01.classList.remove("d-none");
+});
+document.getElementById("dot01").addEventListener("mouseout", () => {
+    prev01.classList.add("d-none");
+});
+document.getElementById("dot02").addEventListener("mouseover", () => {
+    prev02.classList.remove("d-none");
+});
+document.getElementById("dot02").addEventListener("mouseout", () => {
+    prev02.classList.add("d-none");
+});
+document.getElementById("dot03").addEventListener("mouseover", () => {
+    prev03.classList.remove("d-none");
+});
+document.getElementById("dot03").addEventListener("mouseout", () => {
+    prev03.classList.add("d-none");
+});
+
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </html>
