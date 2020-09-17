@@ -22,14 +22,22 @@
                             <a href="#home" class="logo-wrapper">
                                 <h2 class="logo-text">iLabs<span>.</span></h2>
                             </a>
-
-                            <a href="#menu" class="menu-btn">
-                                <i class="fas fa-bars"></i>
-                            </a>
+                            <i id="menubtn" onclick="menutoggle(this)" class="fas fa-bars menu-btn"></i>
+                           
 
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="expanded-nav menu-none" id="labs-menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#" >About</a></li>
+                    <li><a href="#" >Portfolio</a></li>
+                    <li><a href="#" >Blog</a></li>
+                    <li><a href="#" >Contact</a></li>
+                    <li><span id="menu-btn-close" onclick="closemainmenu(this)"  class="close-btn">X</span></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -56,10 +64,8 @@
                     <h2 class="caption-text">stylish<span>.</span></h2>
                 </div>
             </div>
-        </div>
-          
-        <!-- The dots/circles -->
-        <!-- <div class="dotset">
+            <!-- The dots/circles -->
+        <div class="dotset">
             <div id="prev01" class="preview d-none" >
                 <img id="prev-img" src="./images/cover3.jpg" >
                 <h6 id="prev-text">professional<span>.</span></h6>
@@ -75,7 +81,10 @@
             <span id="dot01" class="dot" onclick="currentSlide(1)"></span>
             <span id="dot02" class="dot" onclick="currentSlide(2)"></span>
             <span id="dot03" class="dot" onclick="currentSlide(3)"></span>
-        </div> -->
+        </div>
+        </div>
+          
+        
     </section>
     <!--portfolio section begins -->
     <section class="portfolio section-padding" id="portfolio">
@@ -332,6 +341,10 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="col-md-12 p-0 mt-view">
+                   <a href="#" class="view-blog-btn">View Blog</a>
+                </div>
             </div>
         </div>
     </section>
@@ -426,53 +439,5 @@
     </footer>
     <!--footer ends -->
 </body>
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-var prev01 = document.getElementById("prev01");
-var prev02 = document.getElementById("prev02");
-var prev03 = document.getElementById("prev03");
-
-document.getElementById("dot01").addEventListener("mouseover", () => {
-    prev01.classList.remove("d-none");
-});
-document.getElementById("dot01").addEventListener("mouseout", () => {
-    prev01.classList.add("d-none");
-});
-document.getElementById("dot02").addEventListener("mouseover", () => {
-    prev02.classList.remove("d-none");
-});
-document.getElementById("dot02").addEventListener("mouseout", () => {
-    prev02.classList.add("d-none");
-});
-document.getElementById("dot03").addEventListener("mouseover", () => {
-    prev03.classList.remove("d-none");
-});
-document.getElementById("dot03").addEventListener("mouseout", () => {
-    prev03.classList.add("d-none");
-});
-
-
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-</script>
+<script src="./js/main.js"></script>
 </html>

@@ -52,6 +52,7 @@ section.portfolio {
 .menu-btn{
     margin-left: auto;
     order: 2;
+    cursor: pointer;
 }
 
 .section-padding{
@@ -133,12 +134,12 @@ p.subtitle{
     right: 0;
     text-align: center;
     position: absolute;
-   bottom: 0;
+   bottom: 23px;
 }
 .dot {
   cursor: pointer;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   margin: 0 2px;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -146,9 +147,59 @@ p.subtitle{
   transition: background-color 0.6s ease;
 }
 
+span.active{ 
+    background-color: #ffffff ;
+}
+.expanded-nav{
+
+    text-align: center;
+    padding: 20px 0px;
+    position: absolute;
+    background-color: white;
+    z-index: 99;
+    width: 100%;
+    
+}
+.expanded-nav ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.expanded-nav ul li{
+    display: inline-block;
+}
+.expanded-nav ul li > a {
+   padding : 0rem 3.5rem;
+   font-weight: 600;
+   font-size: 1.6rem;
+   color: #515151;
+   text-transform: uppercase; 
+   font-family: 'Poppins', sans-serif;
+}
+
+.expanded-nav ul li > a.active{
+    color: #ababab !important;
+    text-decoration: line-through;
+}
+
+.close-btn{
+    color: #ababab !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .active .dot:hover {
   background-color: #fff;
 }
+
+.menu-none{
+    transition: max-height 0.15s ease-out;
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+
 
 /* Fading animation */
 .fade {
@@ -336,8 +387,23 @@ section.news{
     
 }
 
+.view-blog-btn{
+    background-color : #ebebeb;
+    color: #535353;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-radius: 14px;
+}
+
 .news-flex{
     display: flex;
+}
+
+.mt-view{
+    margin-top: 4rem;
 }
 
 .single-news{
@@ -561,8 +627,7 @@ padding: 10px 20px;
 
 @media (max-width: 500px) {
     .caption-text {
-        font-size: 3.8rem !important;
-        margin-top: 1rem;
+        font-size: 2.8rem !important;
     }
 
     .insta-flex{
@@ -597,6 +662,10 @@ padding: 10px 20px;
 
     .image-column {
         flex: 100%;
+    }
+
+    .dotset{
+        bottom: 10px;
     }
 }
 
@@ -637,6 +706,20 @@ padding: 10px 20px;
     .image-column {
         flex: 100%;
     }
+
+    .expanded-nav ul li{
+        display: block;
+        padding: 5px 5px;
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+      }
+
+      .dotset{
+        bottom: 15px;
+    }
    
 }
 
@@ -662,8 +745,19 @@ padding: 10px 20px;
     .image-column {
         flex: 100%;
     }
+
+    .expanded-nav ul li{
+        display: inline-block;
+    }  
+
+    .dot {
+        height: 15px;
+        width: 15px;
+      }
     
-    
+    .expanded-nav{
+        padding: 0px;;
+    }
     
 }
 
@@ -686,6 +780,10 @@ padding: 10px 20px;
 
     .image-column {
         flex: 50%;
+    }
+
+    .expanded-nav{
+        padding: 20px 0px;;
     }
 }
 @media (min-width: 1200px) {
